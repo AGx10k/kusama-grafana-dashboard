@@ -17,7 +17,7 @@
   "gnetId": 12410,
   "graphTooltip": 0,
   "id": 8,
-  "iteration": 1592769065774,
+  "iteration": 1604879301190,
   "links": [
     {
       "icon": "external link",
@@ -28,6 +28,146 @@
     }
   ],
   "panels": [
+    {
+      "alert": {
+        "alertRuleTags": {},
+        "conditions": [
+          {
+            "evaluator": {
+              "params": [
+                0.99
+              ],
+              "type": "lt"
+            },
+            "operator": {
+              "type": "and"
+            },
+            "query": {
+              "params": [
+                "A",
+                "5m",
+                "now"
+              ]
+            },
+            "reducer": {
+              "params": [],
+              "type": "avg"
+            },
+            "type": "query"
+          }
+        ],
+        "executionErrorState": "alerting",
+        "for": "5m",
+        "frequency": "1m",
+        "handler": 1,
+        "message": "Kusama port 9615 is not up",
+        "name": "Kusama port 9615 is up",
+        "noDataState": "no_data",
+        "notifications": [
+          {
+            "uid": "VFCKvCvMk"
+          }
+        ]
+      },
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "hiddenSeries": false,
+      "id": 26,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "sort": "current",
+        "sortDesc": false,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "up{job=\"kusama\"}",
+          "interval": "",
+          "legendFormat": "{{instance}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [
+        {
+          "colorMode": "critical",
+          "fill": true,
+          "line": true,
+          "op": "lt",
+          "value": 0.99
+        }
+      ],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Kusama port 9615 is up",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
     {
       "alert": {
         "alertRuleTags": {},
@@ -65,7 +205,7 @@
         "noDataState": "no_data",
         "notifications": [
           {
-            "uid": "EF88CeqZk"
+            "uid": "VFCKvCvMk"
           }
         ]
       },
@@ -82,7 +222,7 @@
         "h": 6,
         "w": 14,
         "x": 0,
-        "y": 0
+        "y": 5
       },
       "hiddenSeries": false,
       "id": 6,
@@ -95,7 +235,7 @@
         "rightSide": true,
         "show": true,
         "sort": "current",
-        "sortDesc": true,
+        "sortDesc": false,
         "total": false,
         "values": true
       },
@@ -129,8 +269,7 @@
           "fill": true,
           "line": true,
           "op": "lt",
-          "value": 0.1,
-          "yaxis": "left"
+          "value": 0.1
         }
       ],
       "timeFrom": null,
@@ -156,7 +295,7 @@
           "format": "none",
           "label": null,
           "logBase": 1,
-          "max": null,
+          "max": "0.2",
           "min": "0",
           "show": true
         },
@@ -212,7 +351,7 @@
         "noDataState": "no_data",
         "notifications": [
           {
-            "uid": "EF88CeqZk"
+            "uid": "VFCKvCvMk"
           }
         ]
       },
@@ -227,7 +366,7 @@
         "h": 6,
         "w": 10,
         "x": 14,
-        "y": 0
+        "y": 5
       },
       "hiddenSeries": false,
       "id": 24,
@@ -239,6 +378,8 @@
         "min": false,
         "rightSide": true,
         "show": true,
+        "sort": "current",
+        "sortDesc": false,
         "total": false,
         "values": true
       },
@@ -322,7 +463,7 @@
         "h": 6,
         "w": 14,
         "x": 0,
-        "y": 6
+        "y": 11
       },
       "id": 23,
       "links": [],
@@ -389,7 +530,7 @@
         "h": 6,
         "w": 10,
         "x": 14,
-        "y": 6
+        "y": 11
       },
       "id": 8,
       "links": [],
@@ -455,7 +596,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 12
+        "y": 17
       },
       "hiddenSeries": false,
       "id": 4,
@@ -551,7 +692,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 12
+        "y": 17
       },
       "hiddenSeries": false,
       "id": 2,
@@ -635,7 +776,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 20
+        "y": 25
       },
       "id": 22,
       "options": {
@@ -692,7 +833,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 20
+        "y": 25
       },
       "hiddenSeries": false,
       "id": 20,
@@ -780,7 +921,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 28
+        "y": 33
       },
       "hiddenSeries": false,
       "id": 10,
@@ -883,7 +1024,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 28
+        "y": 33
       },
       "hiddenSeries": false,
       "id": 18,
@@ -971,7 +1112,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 36
+        "y": 41
       },
       "hiddenSeries": false,
       "id": 14,
@@ -1062,7 +1203,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 36
+        "y": 41
       },
       "hiddenSeries": false,
       "id": 16,
@@ -1144,7 +1285,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 44
+        "y": 49
       },
       "id": 12,
       "options": {
@@ -1314,5 +1455,5 @@
   "variables": {
     "list": []
   },
-  "version": 22
+  "version": 26
 }
